@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main.xml"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/welcomeFragment"
+        android:name="com.genies.avatar_api_sampleapp.ui.welcome.WelcomeFragment"
+        android:label="Welcome">
+
+        <action
+            android:id="@+id/welcome_to_login"
+            app:destination="@id/loginFragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/wait_anim"
+            app:popEnterAnim="@anim/wait_anim"
+            app:popExitAnim="@anim/slide_right" />
+
+        <action
+            android:id="@+id/welcome_to_register"
+            app:destination="@id/signupFragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/wait_anim"
+            app:popEnterAnim="@anim/wait_anim"
+            app:popExitAnim="@anim/slide_right" />
+
+        <action
+            android:id="@+id/welcome_to_logged_in"
+            app:destination="@id/loggedInFragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/wait_anim"
+            app:popEnterAnim="@anim/wait_anim"
+            app:popExitAnim="@anim/slide_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.genies.avatar_api_sampleapp.ui.login.LoginFragment"
+        android:label="Login">
+
+        <action
+            android:id="@+id/login_to_logged_in"
+            app:destination="@id/loggedInFragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/wait_anim"
+            app:popEnterAnim="@anim/wait_anim"
+            app:popExitAnim="@anim/slide_right"
+             />
+
+        <action
+            android:id="@+id/login_to_signup"
+            app:destination="@id/signupFragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/wait_anim"
+            app:popEnterAnim="@anim/wait_anim"
+            app:popExitAnim="@anim/slide_right"
+            />
+
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/loggedInFragment"
+        android:name="com.genies.avatar_api_sampleapp.ui.assetslist.AvatarAssetsListFragment"
+        android:label="Logged in">
+
+        <action
+            android:id="@+id/assets_list_to_welcome_screen"
+            app:destination="@id/loginFragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/wait_anim"
+            app:popEnterAnim="@anim/wait_anim"
+            app:popExitAnim="@anim/slide_right"
+            />
+
+        <action
+            android:id="@+id/assets_list_to_closet"
+            app:destination="@id/closetFragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/wait_anim"
+            app:popEnterAnim="@anim/wait_anim"
+            app:popExitAnim="@anim/slide_right"
+            />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/closetFragment"
+        android:name="com.genies.avatar_api_sampleapp.ui.closet.AvatarClosetFragment"
+        android:label="Avatar closet">
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/signupFragment"
+        android:name="com.genies.avatar_api_sampleapp.ui.signup.SignUpFragment"
+        android:label="Sign up">
+        <action
+            android:id="@+id/signup_to_signup_confirmation"
+            app:destination="@id/signupConfirmationFragment"
+            app:enterAnim="@anim/slide_left"
+            app:exitAnim="@anim/wait_anim"
+            app:popEnterAnim="@anim/wait_anim"
+            app:popExitAnim="@anim/slide_right"
+            app:popUpTo="@id/loginFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/signupConfirmationFragment"
+        android:name="com.genies.avatar_api_sampleapp.ui.signup.SignUpConfirmationFragment"
+        android:label="Signup Confirmation">
+
+        <argument
+            android:name="username"
+            app:argType="string" />
+    </fragment>
+
+</navigation>

@@ -1,0 +1,3 @@
+include ':avatar-api-sampleapp'
+include ':avatar-api-library'
+rootProject.name = "avatar-api-android"

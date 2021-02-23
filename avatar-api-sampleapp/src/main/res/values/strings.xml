@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Genies Avatar API Sample App</string>
+    <string name="genies">Genies</string>
+    <string name="button_create_my_genie">Create my Genie</string>
+    <string name="button_login">Login</string>
+    <string name="title_register">Register</string>
+    <string name="title_login">Login</string>
+    <string name="btn_sign_out">Sign out</string>
+    <string name="btn_closet">CLOSET</string>
+</resources>
