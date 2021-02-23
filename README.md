@@ -22,7 +22,7 @@ This repository contains the [Genies Avatar API library](https://github.com/geni
 3. Open build.gradle (Module: app) file
    - Add to dependencies
    ```
-   implementation 'com.github.geniesinc:android-genies-api:0.0.4-alpha:dev@aar'
+   implementation 'com.github.geniesinc:android-genies-api:0.0.5:dev@aar'
    ```
 
 #### Avatar API client initialization:
@@ -50,3 +50,5 @@ avatarApi.depositAsset(idToken, userId, assetId)
 ```kotlin
 avatarApi.withdrawAsset(idToken, userId, assetId, assetInstanceId)
 ```
+## Sample
+To use the sample app you need to get an `authToken` and `clientId` by [applying for a partner account](https://geniesinc.github.io/#step-one-apply-for-a-partner-account)
